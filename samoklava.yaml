@@ -7,7 +7,7 @@ points:
   key:
     footprints:
       choc_hotswap:
-        type: choc
+        type: mx
         params:
           hotswap: true
           reverse: true
@@ -32,11 +32,6 @@ points:
       #   rotate: 5
       key.padding: ky
       columns:
-        func:
-          stagger: 0 ky
-          spread: kx
-          key:
-            column_net: P21
         pinky:
           stagger: 0 ky
           spread: kx
@@ -188,7 +183,7 @@ outlines:
       top_left:
         type: circle
         anchor:
-          - ref: matrix_ring_home
+          - ref: matrix_ring_top
             shift: [-0.5 kx, 0 ky]
         radius: 1.05
       bottom_left:

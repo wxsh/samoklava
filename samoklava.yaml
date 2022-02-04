@@ -69,6 +69,8 @@ points:
           row_net: P5
         top:
           row_net: P4
+        num:
+          row_net: P2
     thumbfan:
       anchor:
         ref: matrix_inner_bottom

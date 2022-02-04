@@ -6,8 +6,8 @@ units:
 points:
   key:
     footprints:
-      choc_hotswap:
-        type: choc
+      mx_hotswap:
+        type: mx
         params:
           hotswap: true
           reverse: true
@@ -122,6 +122,8 @@ outlines:
             shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
           - ref: thumbfan_near_thumb
             shift: [-0.5 kx + 0.5 px, -0.5 ky - 0.5 py]
+          - ref: thumbfan_pinky_thumb
+            shift: [-0.5 kx + 0.5 px, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_bottom
             shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_home
@@ -194,7 +196,7 @@ outlines:
       top_left:
         type: circle
         anchor:
-          - ref: matrix_ring_home
+          - ref: matrix_ring_top
             shift: [-0.5 kx, 0 ky]
         radius: 1.05
       bottom_left:
@@ -213,13 +215,13 @@ outlines:
         type: circle
         anchor:
           - ref: matrix_index_bottom
-            shift: [0, -1.06 ky]
+            shift: [0.1kx, -1.06 ky]
         radius: 1.05
       thumb:
         type: circle
         anchor:
           - ref: thumbfan_far_thumb
-            shift: [-0.55 kx, 0]
+            shift: [-0.5 kx, 0]
         radius: 1.05
     mounting_holes:
       $extends: outlines.exports.screw_holes

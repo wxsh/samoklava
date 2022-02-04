@@ -1,13 +1,13 @@
 units:
-  kx: cx
-  ky: cy
+  kx: u
+  ky: u
   px: 2
   py: 2
 points:
   key:
     footprints:
       choc_hotswap:
-        type: choc
+        type: mx
         params:
           hotswap: true
           reverse: true
@@ -32,13 +32,18 @@ points:
       #   rotate: 5
       key.padding: ky
       columns:
+        func:
+          stagger: 0 ky
+          spread: kx
+          key:
+            column_net: P21
         pinky:
           stagger: 0 ky
           spread: kx
           key:
             column_net: P20
         ring:
-          stagger: 0.7 ky
+          stagger: 0.4 ky
           spread: kx
           key:
             column_net: P19
@@ -64,6 +69,8 @@ points:
           row_net: P5
         top:
           row_net: P4
+        num:
+          row_net: P3
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -443,4 +450,3 @@ pcbs:
           layer: B.SilkS
           text: "samoklava v0.1\\nby soundmonster"
           justify: right mirror
-

@@ -7,7 +7,7 @@ points:
   key:
     footprints:
       choc_hotswap:
-        type: mx
+        type: choc
         params:
           hotswap: true
           reverse: true

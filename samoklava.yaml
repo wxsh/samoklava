@@ -74,23 +74,29 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.5 kx, -1 ky]
+        shift: [-2.5 kx, -1 ky]
       columns:
+        pinky:
+          key: 
+            column_net: P20
+        palm:
+          key:
+            column_net: P19
         near:
           spread: kx
-          rotate: -15
+          rotate: -10
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P18
         home:
           spread: kx
-          rotate: -15
+          rotate: -5
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P15
         far:
           spread: kx
-          rotate: -15
+          rotate: 0
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P14
@@ -144,7 +150,7 @@ outlines:
         anchor:
           ref:
             - matrix_inner_top
-          shift: [0 kx, -4.05 ky]
+          shift: [0 kx, -3.5 ky]
         size: [32, 76.5]
         corner: px
     switches:

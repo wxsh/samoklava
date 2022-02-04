@@ -32,6 +32,11 @@ points:
       #   rotate: 5
       key.padding: ky
       columns:
+        func:
+          stagger: 0 ky
+          spread: kx
+          key:
+            column_net: P21
         pinky:
           stagger: 0 ky
           spread: kx

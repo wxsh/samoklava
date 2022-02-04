@@ -1,13 +1,13 @@
 units:
-  kx: u
-  ky: u
+  kx: cx
+  ky: cy
   px: 2
   py: 2
 points:
   key:
     footprints:
       choc_hotswap:
-        type: mx
+        type: choc
         params:
           hotswap: true
           reverse: true
@@ -38,7 +38,7 @@ points:
           key:
             column_net: P20
         ring:
-          stagger: 0.4 ky
+          stagger: 0.7 ky
           spread: kx
           key:
             column_net: P19
@@ -64,8 +64,6 @@ points:
           row_net: P5
         top:
           row_net: P4
-        num:
-          row_net: P3
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -183,7 +181,7 @@ outlines:
       top_left:
         type: circle
         anchor:
-          - ref: matrix_ring_top
+          - ref: matrix_ring_home
             shift: [-0.5 kx, 0 ky]
         radius: 1.05
       bottom_left:

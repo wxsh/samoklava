@@ -15,7 +15,14 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate unrouted PCBs
-        run: npm run gen
+        run: |
+          cp index.js ./node_modules/ergogen/src/footprints
+          cp bat.js ./node_modules/ergogen/src/footprints
+          cp b3u1000p.js ./node_modules/ergogen/src/footprints
+          cp promicro.js ./node_modules/ergogen/src/footprints
+          cp pcm12.js ./node_modules/ergogen/src/footprints
+          cp promicro_pretty.js ./node_modules/ergogen/src/footprints
+          npm run gen
       - name: Export DSN for main PCB
         uses: ./.github/actions/export-dsn
         with:
@@ -47,6 +54,17 @@ jobs:
         with:
           pcb_file: output/pcbs/board.kicad_pcb
           gerbers_dir: output/gerbers/board
+      - name: Generate Images
+        uses: ./.github/actions/export_pngs
+        with:
+          pcb_file: '"./output/pcbs/board.kicad_pcb"'
+          pngs_dir: ./images
+      - name: Update gallery
+        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+        with:
+          commit_message: "Update gallery (automated)"
+          commit_user_name: GitHub Actions Bot
+          file_pattern: "**/*.png"
       - name: Persist output
         uses: actions/upload-artifact@v2
         with:

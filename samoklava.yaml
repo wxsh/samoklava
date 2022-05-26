@@ -423,7 +423,7 @@ pcbs:
             - matrix_pinky_bottom
           shift: [0.75 kx, 0]
         params:
-          text: "samoklava v0.1\\nby soundmonster"
+          text: "samoklava sweep v0.1\\nby soundmonster"
           justify: left
       info_r:
         type: text
@@ -433,6 +433,6 @@ pcbs:
           shift: [0.75 kx, 0]
         params:
           layer: B.SilkS
-          text: "samoklava v0.1\\nby soundmonster"
+          text: "samoklava sweep v0.1\\nby soundmonster"
           justify: right mirror
 
